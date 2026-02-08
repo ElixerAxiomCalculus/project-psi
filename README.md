@@ -1,4 +1,4 @@
-# Project Psi v3.0 - Production-Grade Multi-Agent AI Browser Copilot
+# Project Psi - Production-Grade Multi-Agent AI Browser Copilot
 
 > A sophisticated Chrome Extension that implements a multi-agent AI system, bringing desktop copilot capabilities directly inside your browser with local LLM support.
 
