@@ -131,13 +131,13 @@ backend/
 
 ## 7-Phase Implementation Status
 
-### ✅ PHASE 1: React Agent Hub (COMPLETE)
+### PHASE 1: React Agent Hub (COMPLETE)
 - [x] Sidebar layout with persistent state
 - [x] Radial/circular agent launcher
 - [x] Component-based view switching (no remounting)
 - [x] Multi-agent layout
 
-### ✅ PHASE 2: Global State (COMPLETE)
+### PHASE 2: Global State (COMPLETE)
 - [x] Zustand store implementation
 - [x] Selectors for optimized subscriptions
 - [x] Session management
@@ -155,19 +155,19 @@ backend/
 - [ ] Memory persistence
 - [ ] Future: Vector search ready
 
-### 🎯 PHASE 5: Personal Automation (PLANNED)
+### PHASE 5: Personal Automation (PLANNED)
 - Intent detection layer
 - Confirmation workflow
 - OAuth2 Gmail integration
 - Task queue system
 
-### 🎯 PHASE 6: Voice Agent (PLANNED)
+### PHASE 6: Voice Agent (PLANNED)
 - Web Speech API integration
 - Transcription pipeline
 - Whisper.js compatibility layer
 - Voice output synthesis
 
-### 🎯 PHASE 7: Multi-Agent Router (PLANNED  )
+### PHASE 7: Multi-Agent Router (PLANNED)
 - Specialized agent dispatch
 - Agent capability matching
 - Dynamic agent loading
@@ -571,7 +571,7 @@ export type AgentType = ... | 'my-agent'
   id: 'my-agent',
   name: 'My Agent',
   description: '...',
-  icon: '🤖',
+  icon: 'icon-agent',
   enabled: true
 }
 ```

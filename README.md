@@ -1,8 +1,8 @@
-# 🤖 Project Psi v3.0 - Production-Grade Multi-Agent AI Browser Copilot
+# Project Psi v3.0 - Production-Grade Multi-Agent AI Browser Copilot
 
 > A sophisticated Chrome Extension that implements a multi-agent AI system, bringing desktop copilot capabilities directly inside your browser with local LLM support.
 
-## 📦 What is Project Psi?
+## What is Project Psi?
 
 Project Psi is a **production-ready Chrome Extension** that transforms your browser into an AI-powered research and productivity companion. Built with modern TypeScript, React 19, and FastAPI, it provides:
 
@@ -14,20 +14,20 @@ Project Psi is a **production-ready Chrome Extension** that transforms your brow
 
 ### Key Features
 
-✅ **Zero-config Local Setup** - Runs entirely on your machine (Ollama + FastAPI)  
-✅ **Production Architecture** - Clean separation of concerns, scalable design  
-✅ **Fast & Responsive** - Inline sidebar with no performance overhead  
-✅ **Full Type Safety** - TypeScript strict mode across entire codebase  
-✅ **Extensible Framework** - Agent-based design enables easy additions  
-✅ **Session Management** - Multi-tab support with persistent context  
-✅ **Tool-Calling System** - LLM can execute defined tools automatically  
+- **Zero-config Local Setup** - Runs entirely on your machine (Ollama + FastAPI)
+- **Production Architecture** - Clean separation of concerns, scalable design
+- **Fast & Responsive** - Inline sidebar with no performance overhead
+- **Full Type Safety** - TypeScript strict mode across entire codebase
+- **Extensible Framework** - Agent-based design enables easy additions
+- **Session Management** - Multi-tab support with persistent context
+- **Tool-Calling System** - LLM can execute defined tools automatically
 
-## 🚀 Quick Start (5 Minutes)
+## Quick Start (5 Minutes)
 
 ### Prerequisites
 - Python 3.9+ | Node.js 18+ | Chrome Browser | Ollama
 
-### 1️⃣ Install & Start Services
+### 1. Install & Start Services
 
 ```bash
 # Terminal 1: Ollama (LLM)
@@ -44,36 +44,37 @@ cd ui
 npm install && npm run build
 ```
 
-### 2️⃣ Load Extension
+### 2. Load Extension
 
 1. Visit `chrome://extensions/`
 2. Enable **Developer Mode** (toggle top-right)
 3. Click **Load Unpacked**
 4. Select `extension/` folder
 
-### 3️⃣ Test It
+### 3. Test It
 
 1. Open any website
-2. Click extension icon → Sidebar loads
-3. Select **Web Copilot** → Click **Summarize**
-4. AI summarizes the page instantly ✨
+2. Click extension icon -> Sidebar loads
+3. Select **Web Copilot** -> Click **Summarize**
+4. AI summarizes the page
 
 **That's it!** Extension is now running locally on your machine.
 
-## 📚 Documentation
+## Documentation
 
 | Document | Purpose |
 |----------|---------|
-| [ARCHITECTURE.md](ARCHITECTURE.md) | System design, API contracts, deployment |
-| [SETUP.md](SETUP.md) | Detailed local development + production setup |
-| [BACKEND_GUIDE.md](BACKEND_GUIDE.md) | Backend API, tool-calling, database setup |
-| [QUICK_REFERENCE.md](QUICK_REFERENCE.md) | Command cheatsheet, code templates, debugging |
+| [README.md](README.md) | Project overview and quick start |
+| [UPDATES.md](UPDATES.md) | Latest changes and current status |
+| [SETUP.md](SETUP.md) | Detailed setup and configuration |
+| [ARCHITECTURE.md](ARCHITECTURE.md) | System design and technical details |
+| [SECURITY_AUDIT.md](SECURITY_AUDIT.md) | Security assessment and recommendations |
 
-**Start here:** [SETUP.md](SETUP.md) for development environment  
-**Build something new:** [BACKEND_GUIDE.md](BACKEND_GUIDE.md) for adding tools  
-**Need help?** [QUICK_REFERENCE.md](QUICK_REFERENCE.md) for common patterns
+**Start here:** [SETUP.md](SETUP.md) for complete setup instructions
+**Current status:** [UPDATES.md](UPDATES.md) for latest features and changes
+**System design:** [ARCHITECTURE.md](ARCHITECTURE.md) for technical overview
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 Project Agent/
@@ -117,7 +118,7 @@ Project Agent/
 └── README.md                     # This file
 ```
 
-## 🔧 Technology Stack
+## Technology Stack
 
 | Layer | Technology | Version | Purpose |
 |-------|-----------|---------|---------|
@@ -133,19 +134,19 @@ Project Agent/
 | **LLM** | Ollama | Latest | Local inference |
 | | Qwen | 3B | Model |
 
-## 🎯 Core Concepts
+## Core Concepts
 
 ### Multi-Agent Architecture
 
 The system implements **7 agent types** (2 enabled by default):
 
-1. **Web Copilot** ✅ - Summarizes pages, answers questions
-2. **Chat** 🔄 - General conversation
-3. **Memory** ✅ - Personal knowledge management
-4. **Automation** 🎯 - Execute tasks (Phase 5)
-5. **Voice** 🎧 - Speech interaction (Phase 6)
-6. **Research** 🔍 - Deep web research (Phase 7)
-7. **Multi-Router** 🔀 - Agent selection (Phase 7)
+1. **Web Copilot** (Active) - Summarizes pages, answers questions
+2. **Chat** - General conversation
+3. **Memory** (Active) - Personal knowledge management
+4. **Automation** - Execute tasks (Phase 5)
+5. **Voice** - Speech interaction (Phase 6)
+6. **Research** - Deep web research (Phase 7)
+7. **Multi-Router** - Agent selection (Phase 7)
 
 ### State Management (Zustand)
 
@@ -186,7 +187,7 @@ Tools are registered in backend and executed with structured input/output:
 }
 ```
 
-## 🛠️ Development
+## Development
 
 ### Add a New Component
 
@@ -226,7 +227,7 @@ import { useAppStore } from '@/store/appStore'
 useAppStore.getState()
 ```
 
-## 📊 Performance
+## Performance
 
 - **Bundle Size**: 536 KB (sidebar.js) + 18 KB (sidebar.css) = 554 KB total
 - **Startup Time**: ~200ms sidebar injection
@@ -234,29 +235,29 @@ useAppStore.getState()
 - **Tool Execution**: 1-5s typical (LLM dependent)
 - **Multi-tab**: Supports up to 50 concurrent sessions
 
-## 🔐 Security
+## Security
 
-- ✅ Content isolated in shadow DOM
-- ✅ No inline scripts (CSP compliant)
-- ✅ Credential storage in Chrome's secure storage (future)
-- ✅ Permission model with user confirmation
-- ✅ CORS configured for production
-- ✅ Input validation on all endpoints
+- Content isolated in shadow DOM
+- No inline scripts (CSP compliant)
+- Credential storage in Chrome's secure storage (future)
+- Permission model with user confirmation
+- CORS configured for production
+- Input validation on all endpoints
 
-## 📈 Implementation Phases
+## Implementation Phases
 
-### ✅ Completed
+### Completed
 - **Phase 1**: React Sidebar as Agent Hub
 - **Phase 2**: Global State Architecture (Zustand)
 - **Phase 3**: Tool-Calling Backend (FastAPI + Ollama)
 - **Phase 4**: Memory System (Short + Long-term)
 
-### 🎯 In Progress
+### In Progress
 - **Phase 5**: Personal Automation Engine (UI designed, backend integration pending)
 - **Phase 6**: Voice Agent (Architecture designed, Web Speech API pending)
 - **Phase 7**: Multi-Agent Router (Foundation ready, specialized agents pending)
 
-## 🚀 What's Next?
+## What's Next?
 
 **For Users:**
 1. Test with this build: works immediately with Ollama
@@ -265,7 +266,7 @@ useAppStore.getState()
 4. Suggest features: Discuss planned phases
 
 **For Developers:**
-1. Read [BACKEND_GUIDE.md](BACKEND_GUIDE.md) to extend with new tools
+1. Read [UPDATES.md](UPDATES.md) for endpoint information
 2. Add new agents in `ui/src/components/agents/`
 3. Implement Phase 5-7 features directly
 4. Improve existing components with feedback
@@ -276,7 +277,7 @@ useAppStore.getState()
 3. Make changes with tests
 4. Submit PR with description
 
-## 💡 Use Cases
+## Use Cases
 
 ### 1. Research Assistant
 - Summarize research papers instantly
@@ -298,34 +299,34 @@ useAppStore.getState()
 - Generate outlines from summaries
 - Store inspiration notes
 
-## 🆘 Troubleshooting
+## Troubleshooting
 
-**Q: Sidebar doesn't appear?**  
+**Q: Sidebar doesn't appear?**
 A: Check Console (F12) for errors, verify extension loads, rebuild frontend (`npm run build`), reload extension
 
-**Q: "Cannot connect to backend"?**  
+**Q: "Cannot connect to backend"?**
 A: Ensure `python server.py` is running on `http://127.0.0.1:8000`, check `curl http://127.0.0.1:8000/health`
 
-**Q: LLM timeouts?**  
+**Q: LLM timeouts?**
 A: Use smaller model (`ollama pull qwen:1.8b`), check system resources (`ollama ps`), increase timeout
 
-**Q: TypeScript errors?**  
+**Q: TypeScript errors?**
 A: Clear cache: `rm -rf ui/node_modules ui/dist`, reinstall: `npm install`, rebuild: `npm run build`
 
 See [SETUP.md](SETUP.md) "Common Issues" section for more help.
 
-## 📞 Support
+## Support
 
 - **Documentation**: Read relevant `.md` files in project root
 - **Issues**: GitHub Issues for bugs
 - **Discussions**: GitHub Discussions for feature ideas
-- **Contributing**: See CONTRIBUTING.md (future)
+- **Contributing**: Contributions welcome through GitHub
 
-## 📜 License
+## License
 
 Project Psi is available under the MIT License. See LICENSE file for details.
 
-## 🎓 Learning Resources
+## Learning Resources
 
 - **Chrome Extension Docs**: https://developer.chrome.com/docs/extensions/
 - **React Docs**: https://react.dev
@@ -334,7 +335,7 @@ Project Psi is available under the MIT License. See LICENSE file for details.
 - **Ollama**: https://ollama.ai
 - **TypeScript**: https://www.typescriptlang.org
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 Built with:
 - React for component architecture
@@ -344,18 +345,18 @@ Built with:
 - Chrome Extension APIs for browser integration
 - Vite for modern build tooling
 
-## 📝 Changelog
+## Changelog
 
 ### v3.0 (Current)
-- ✨ Complete multi-agent architecture refactor
-- ✨ Zustand state management system
-- ✨ Tool-calling backend integration
-- ✨ Memory system with short/long-term storage
-- ✨ 5 component agents + home view
-- ✨ Comprehensive documentation
-- ✅ Production-ready build
-- 🐛 Fixed CSS import case sensitivity
-- 🐛 Fixed Vite minification config
+- Complete multi-agent architecture refactor
+- Zustand state management system
+- Tool-calling backend integration
+- Memory system with short/long-term storage
+- 5 component agents + home view
+- Comprehensive documentation
+- Production-ready build
+- Fixed CSS import case sensitivity
+- Fixed Vite minification config
 
 ### v2.0
 - Added markdown rendering
@@ -367,7 +368,7 @@ Built with:
 - Basic summarization
 - Chat interface
 
-## 📊 Stats
+## Stats
 
 - **Lines of Code**: ~8,000+ (TypeScript + Python)
 - **Components**: 5 agents + layout = 10+ React components
@@ -375,7 +376,7 @@ Built with:
 - **Test Coverage**: Core services 80%+
 - **Documentation**: 4 comprehensive guides
 
-## 🔮 Future Vision
+## Future Vision
 
 Project Psi aims to become the **dominant in-browser AI assistant** by:
 
@@ -389,7 +390,7 @@ Project Psi aims to become the **dominant in-browser AI assistant** by:
 
 ---
 
-## 🚀 Ready to Get Started?
+## Ready to Get Started?
 
 ```bash
 # 1. Clone or download
@@ -397,14 +398,14 @@ cd Project\ Agent/
 
 # 2. Follow quick start above (5 minutes)
 # 3. Read SETUP.md for detailed configuration
-# 4. Check QUICK_REFERENCE.md for dev commands
-# 5. Explore BACKEND_GUIDE.md to add custom tools
+# 4. Check UPDATES.md for current features
+# 5. Review ARCHITECTURE.md for system design
 ```
 
-**Questions?** Start with [SETUP.md](SETUP.md) — most answers there.
+**Questions?** Start with [SETUP.md](SETUP.md) - most answers there.
 
 ---
 
-**Project Psi** v3.0 - *"Empowering humans with local AI"*
+**Project Psi** v3.0 - "Empowering humans with local AI"
 
 Latest Update: February 2026 | Status: Production-Ready | [Report Issue](../../issues)

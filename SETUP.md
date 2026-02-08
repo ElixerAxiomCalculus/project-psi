@@ -74,10 +74,10 @@ npm run build
 5. LLM processes page and returns summary in chat
 
 **Success indicators:**
-- ✅ Sidebar appears in shadow DOM
-- ✅ Agent launcher shows 2 agents (Web Copilot + Memory)
-- ✅ Messages appear in chat on button click
-- ✅ No console errors in DevTools
+- Sidebar appears in shadow DOM
+- Agent launcher shows 2 agents (Web Copilot + Memory)
+- Messages appear in chat on button click
+- No console errors in DevTools
 
 ## Detailed Setup
 
@@ -307,37 +307,38 @@ Create `run_psi.sh`:
 ```bash
 #!/bin/bash
 
-echo "🚀 Starting Project Psi..."
+echo "Starting Project Psi..."
 
 # Terminal 1: Ollama
-echo "📦 Starting Ollama..."
+echo "Starting Ollama..."
 ollama serve &
 OLLAMA_PID=$!
 sleep 2
 
 # Terminal 2: Backend
-echo "🔧 Starting Backend..."
+echo "Starting Backend..."
 cd backend
 python server.py &
 BACKEND_PID=$!
 sleep 3
 
 # Terminal 3: Frontend (optional - for development)
-echo "⚙️  Building Frontend..."
+echo "Building Frontend..."
 cd ../ui
 npm run build
 
-echo "\n✅ Project Psi is running!"
 echo ""
-echo "📊 Services:"
-echo "  • Ollama:  http://127.0.0.1:11434"
-echo "  • Backend: http://127.0.0.1:8000"
-echo "  • Docs:    http://127.0.0.1:8000/docs"
+echo "Project Psi is running!"
 echo ""
-echo "🎯 Next steps:"
+echo "Services:"
+echo "  - Ollama:  http://127.0.0.1:11434"
+echo "  - Backend: http://127.0.0.1:8000"
+echo "  - Docs:    http://127.0.0.1:8000/docs"
+echo ""
+echo "Next steps:"
 echo "  1. Open chrome://extensions/"
 echo "  2. Enable Developer Mode"
-echo "  3. Load Unpacked → extension/"
+echo "  3. Load Unpacked -> extension/"
 echo "  4. Visit any website and click extension icon"
 echo ""
 
