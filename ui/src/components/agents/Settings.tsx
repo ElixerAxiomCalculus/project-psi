@@ -15,13 +15,13 @@ export const SettingsView: React.FC = () => {
   const getRiskBadge = (level: PermissionType['riskLevel']) => {
     switch (level) {
       case 'low':
-        return '🟢'
+        return '[ONLINE]'
       case 'medium':
-        return '🟡'
+        return '[LOADING]'
       case 'high':
-        return '🔴'
+        return '[ERROR]'
       default:
-        return '⚪'
+        return '[UNKNOWN]'
     }
   }
 

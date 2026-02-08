@@ -10897,11 +10897,11 @@ const s1 = (i) => {
     /* @__PURE__ */ q.jsxs("div", { className: "psi-home-features", children: [
       /* @__PURE__ */ q.jsx("h3", { children: "Features" }),
       /* @__PURE__ */ q.jsxs("ul", { children: [
-        /* @__PURE__ */ q.jsx("li", { children: "🤖 Multi-agent AI system" }),
-        /* @__PURE__ */ q.jsx("li", { children: "💾 Long-term memory" }),
-        /* @__PURE__ */ q.jsx("li", { children: "⚙️ Automation workflow" }),
-        /* @__PURE__ */ q.jsx("li", { children: "🎙️ Voice interaction (coming soon)" }),
-        /* @__PURE__ */ q.jsx("li", { children: "🔧 Tool-based reasoning" })
+        /* @__PURE__ */ q.jsx("li", { children: "Multi-agent AI system" }),
+        /* @__PURE__ */ q.jsx("li", { children: "Long-term memory" }),
+        /* @__PURE__ */ q.jsx("li", { children: "Automation workflow" }),
+        /* @__PURE__ */ q.jsx("li", { children: "Voice interaction (coming soon)" }),
+        /* @__PURE__ */ q.jsx("li", { children: "Tool-based reasoning" })
       ] })
     ] }),
     /* @__PURE__ */ q.jsx("div", { className: "psi-home-footer", children: /* @__PURE__ */ q.jsx("p", { children: "Built on Qwen 3 8B via Ollama" }) })
@@ -17808,7 +17808,7 @@ const Yb = () => ({
         {
           className: `psi-copilot-tab ${i === "summary" ? "active" : ""}`,
           onClick: () => a("summary"),
-          children: "📋 Summary"
+          children: "Summary"
         }
       ),
       /* @__PURE__ */ q.jsx(
@@ -17816,7 +17816,7 @@ const Yb = () => ({
         {
           className: `psi-copilot-tab ${i === "chat" ? "active" : ""}`,
           onClick: () => a("chat"),
-          children: "💬 Chat"
+          children: "Chat"
         }
       )
     ] }),
@@ -17828,7 +17828,7 @@ const Yb = () => ({
           className: "psi-copilot-action-btn",
           onClick: G,
           disabled: h || d,
-          children: h || d ? "⏳ Analyzing..." : "📖 Analyze Page"
+          children: h || d ? "Analyzing..." : "Analyze Page"
         }
       )
     ] }),
@@ -17853,7 +17853,7 @@ const Yb = () => ({
           {
             onClick: F,
             disabled: !s.trim() || h || d,
-            children: h || d ? "⏳" : "→"
+            children: h || d ? "..." : "→"
           }
         )
       ] })
@@ -17875,13 +17875,13 @@ const Yb = () => ({
   }, S = (E) => {
     switch (E) {
       case "fact":
-        return "💡";
+        return "[INSIGHT]";
       case "preference":
-        return "⭐";
+        return "[STARRED]";
       case "task":
         return "✓";
       default:
-        return "📝";
+        return "[NOTE]";
     }
   };
   return /* @__PURE__ */ q.jsxs("div", { className: "psi-memory", children: [
@@ -17985,17 +17985,17 @@ function Xb() {
         return /* @__PURE__ */ q.jsx(Vb, {});
       case "automation":
         return /* @__PURE__ */ q.jsxs("div", { className: "psi-coming-soon", children: [
-          /* @__PURE__ */ q.jsx("h3", { children: "⚙️ Automation" }),
+          /* @__PURE__ */ q.jsx("h3", { children: "Automation" }),
           /* @__PURE__ */ q.jsx("p", { children: "Automation workflows coming soon..." })
         ] });
       case "voice":
         return /* @__PURE__ */ q.jsxs("div", { className: "psi-coming-soon", children: [
-          /* @__PURE__ */ q.jsx("h3", { children: "🎙️ Voice Agent" }),
+          /* @__PURE__ */ q.jsx("h3", { children: "Voice Agent" }),
           /* @__PURE__ */ q.jsx("p", { children: "Voice interaction coming soon..." })
         ] });
       case "research":
         return /* @__PURE__ */ q.jsxs("div", { className: "psi-coming-soon", children: [
-          /* @__PURE__ */ q.jsx("h3", { children: "🔍 Research Agent" }),
+          /* @__PURE__ */ q.jsx("h3", { children: "Research Agent" }),
           /* @__PURE__ */ q.jsx("p", { children: "Deep research capabilities coming soon..." })
         ] });
       default:

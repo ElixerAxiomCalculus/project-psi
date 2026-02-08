@@ -50,21 +50,21 @@ export default function App() {
       case 'automation':
         return (
           <div className="psi-coming-soon">
-            <h3>⚙️ Automation</h3>
+            <h3>Automation</h3>
             <p>Automation workflows coming soon...</p>
           </div>
         )
       case 'voice':
         return (
           <div className="psi-coming-soon">
-            <h3>🎙️ Voice Agent</h3>
+            <h3>Voice Agent</h3>
             <p>Voice interaction coming soon...</p>
           </div>
         )
       case 'research':
         return (
           <div className="psi-coming-soon">
-            <h3>🔍 Research Agent</h3>
+            <h3>Research Agent</h3>
             <p>Deep research capabilities coming soon...</p>
           </div>
         )

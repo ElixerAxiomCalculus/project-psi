@@ -176,6 +176,7 @@
 
 .psi-copilot-input input:focus {
   border-color: #333;
+  background-color: #f5f5f5;
 }
 
 .psi-copilot-input input:disabled {

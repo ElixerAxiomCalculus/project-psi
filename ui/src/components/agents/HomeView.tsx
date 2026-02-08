@@ -47,11 +47,11 @@ export const HomeView: React.FC = () => {
       <div className="psi-home-features">
         <h3>Features</h3>
         <ul>
-          <li>🤖 Multi-agent AI system</li>
-          <li>💾 Long-term memory</li>
-          <li>⚙️ Automation workflow</li>
-          <li>🎙️ Voice interaction (coming soon)</li>
-          <li>🔧 Tool-based reasoning</li>
+          <li>Multi-agent AI system</li>
+          <li>Long-term memory</li>
+          <li>Automation workflow</li>
+          <li>Voice interaction (coming soon)</li>
+          <li>Tool-based reasoning</li>
         </ul>
       </div>
 

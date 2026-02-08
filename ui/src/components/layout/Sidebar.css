@@ -12,6 +12,7 @@
   transition: right 0.25s ease;
   z-index: 9999999;
   font-family: 'Inter', sans-serif;
+  color: black;
 }
 
 .psi-sidebar.open {

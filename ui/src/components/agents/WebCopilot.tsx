@@ -104,13 +104,13 @@ export const WebCopilotAgent: React.FC = () => {
           className={`psi-copilot-tab ${view === 'summary' ? 'active' : ''}`}
           onClick={() => setView('summary')}
         >
-          📋 Summary
+          Summary
         </button>
         <button
           className={`psi-copilot-tab ${view === 'chat' ? 'active' : ''}`}
           onClick={() => setView('chat')}
         >
-          💬 Chat
+          Chat
         </button>
       </div>
 
@@ -125,7 +125,7 @@ export const WebCopilotAgent: React.FC = () => {
             onClick={handleSummarize}
             disabled={localLoading || agentLoading}
           >
-            {localLoading || agentLoading ? '⏳ Analyzing...' : '📖 Analyze Page'}
+            {localLoading || agentLoading ? 'Analyzing...' : 'Analyze Page'}
           </button>
         </div>
       )}
@@ -166,7 +166,7 @@ export const WebCopilotAgent: React.FC = () => {
               onClick={handleSendMessage}
               disabled={!input.trim() || localLoading || agentLoading}
             >
-              {localLoading || agentLoading ? '⏳' : '→'}
+              {localLoading || agentLoading ? '...' : '→'}
             </button>
           </div>
         </div>

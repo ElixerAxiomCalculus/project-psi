@@ -36,13 +36,13 @@ export const MemoryAgent: React.FC = () => {
   const getTypeIcon = (type: MemoryEntry['type']) => {
     switch (type) {
       case 'fact':
-        return '💡'
+        return '[INSIGHT]'
       case 'preference':
-        return '⭐'
+        return '[STARRED]'
       case 'task':
         return '✓'
       default:
-        return '📝'
+        return '[NOTE]'
     }
   }
 
