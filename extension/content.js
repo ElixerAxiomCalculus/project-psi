@@ -123,12 +123,18 @@ if (!state.listenerAttached) {
   state.listenerAttached = true;
 }
 
-// Create black floating trigger button with PSI symbol
+// Create floating black trigger button with PSI symbol
 function createFloatingTrigger() {
   const triggerId = "psi-floating-trigger";
   
   // Don't create if already exists
   if (document.getElementById(triggerId)) return;
+
+  // Ensure body exists
+  if (!document.body) {
+    setTimeout(createFloatingTrigger, 50);
+    return;
+  }
 
   const button = document.createElement("button");
   button.id = triggerId;
@@ -172,12 +178,14 @@ function createFloatingTrigger() {
 
   button.addEventListener("click", () => {
     injectReactSidebar();
+    // Remove the button after clicking
+    button.remove();
   });
 
   document.body.appendChild(button);
 }
 
-// Auto-inject floating trigger button on page load
+// Create floating trigger button on page load
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", createFloatingTrigger);
 } else {
