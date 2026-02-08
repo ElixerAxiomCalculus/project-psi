@@ -1,0 +1,55 @@
+/* Global App Styles */
+
+* {
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: white;
+  color: #333;
+}
+
+/* Reset button default styles */
+button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Input reset */
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+/* Ensure nothing breaks the page layout */
+#psi-root-host {
+  all: initial;
+}
+
+#psi-root {
+  all: initial;
+  display: contents;
+}
+
+/* Utility Classes */
+.psi-hidden {
+  display: none !important;
+}
+
+.psi-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

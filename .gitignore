@@ -1,0 +1,319 @@
+# Project Psi - .gitignore
+
+# ============================================================================
+# PYTHON & BACKEND
+# ============================================================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# SQLite database files
+*.db
+*.sqlite
+*.sqlite3
+
+# ============================================================================
+# NODE.JS & FRONTEND
+# ============================================================================
+
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Production build artifacts
+ui/dist/
+ui/build/
+
+# Cache directories
+.npm
+.eslintcache
+.node-gyp
+
+# Temporary files
+*.swp
+*.swo
+*~
+.DS_Store
+
+# IDE-specific files
+.vscode/
+.idea/
+.sublime-text-project
+.sublime-workspace
+
+# Environment files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Package lock files (optional - depends on team preference)
+# Uncomment if you want to include these in git
+# package-lock.json
+# yarn.lock
+
+# ============================================================================
+# CHROME EXTENSION
+# ============================================================================
+
+# Built extension directory
+extension/react-build/
+extension/dist/
+
+# Extension build artifacts
+*.zip
+
+# ============================================================================
+# SYSTEM FILES
+# ============================================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+*.swp
+*.swo
+*~
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+.directory
+
+# ============================================================================
+# EDITOR & IDE
+# ============================================================================
+
+# VS Code
+.vscode/
+.vscode/settings.json
+.vscode/launch.json
+.vscode/extensions.json
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+.gradle/
+.classpath
+.project
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# Vim
+.vim/
+*.swp
+*.swo
+*~
+
+# ============================================================================
+# BUILD & DIST
+# ============================================================================
+
+# Compiled output
+dist/
+build/
+*.tsbuildinfo
+
+# Version files
+version.txt
+build-info.json
+
+# ============================================================================
+# SECRET & SECURITY
+# ============================================================================
+
+# API Keys & Credentials
+.env
+.env.local
+.env.*.local
+api_keys.json
+secrets.json
+credentials.json
+tokens.json
+
+# SSH keys
+*.pem
+*.key
+*.pub
+
+# SSL certificates
+*.crt
+*.cert
+*.ca-bundle
+
+# ============================================================================
+# Testing
+# ============================================================================
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# ============================================================================
+# MISC
+# ============================================================================
+
+# Project-specific ignores
+*.bak
+*.tmp
+temp/
+tmp/
+*.orig
+.mergetool.*
+
+# OS-specific
+Desktop.ini
+ehthumbs.db
+Thumbs.db
+
+# Development files
+NOTES.md
+TODO.md
+scratch/
+experimental/
+
+# ============================================================================
+# GIT
+# ============================================================================
+
+# Git diff files
+*.patch
+*.diff

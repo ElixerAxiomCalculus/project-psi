@@ -1,0 +1,186 @@
+/* Sidebar Main Layout */
+.psi-sidebar {
+  position: fixed;
+  top: 0;
+  right: -420px;
+  width: 420px;
+  height: 100vh;
+  background: white;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  transition: right 0.25s ease;
+  z-index: 9999999;
+  font-family: 'Inter', sans-serif;
+}
+
+.psi-sidebar.open {
+  right: 0;
+}
+
+/* Overlay */
+.psi-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 9999998;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Launcher Button */
+.psi-launcher {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background: black;
+  color: white;
+  font-size: 26px;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  z-index: 9999999;
+  font-family: 'Inter', sans-serif;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.psi-launcher:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.psi-launcher:active {
+  transform: scale(0.95);
+}
+
+/* Header */
+.psi-header {
+  padding: 14px;
+  font-weight: 600;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  background: white;
+  flex-shrink: 0;
+}
+
+.psi-title-alpha {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.psi-home-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.psi-home-btn:hover {
+  background: #f0f0f0;
+}
+
+.psi-alpha-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: #ffd700;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 700;
+  color: #333;
+  font-family: 'Inter', sans-serif;
+  flex-shrink: 0;
+}
+
+.psi-close-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+  font-family: 'Inter', sans-serif;
+  color: #666;
+}
+
+.psi-close-btn:hover {
+  background: #f0f0f0;
+  color: #333;
+}
+
+/* Content Area */
+.psi-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Coming Soon Placeholder */
+.psi-coming-soon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 24px;
+  text-align: center;
+  color: #666;
+}
+
+.psi-coming-soon h3 {
+  margin: 0 0 12px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.psi-coming-soon p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Scrollbar Styling */
+.psi-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.psi-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.psi-content::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 3px;
+}
+
+.psi-content::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
