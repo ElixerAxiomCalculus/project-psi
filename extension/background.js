@@ -117,9 +117,17 @@ chrome.runtime.onMessage.addListener((req, sender, sendResponse) => {
         });
 
         const data = await response.json();
+        
+        // Extract the actual data from the result object
+        let responseData = data.result || data;
+        if (responseData && typeof responseData === 'object') {
+          // If it's an object with summary or answer field, extract that
+          responseData = responseData.summary || responseData.answer || responseData;
+        }
+        
         sendResponse({
           status: "success",
-          data: data.result || data
+          data: responseData
         });
       } catch (error) {
         console.error("EXECUTE_TOOL failed:", error);
