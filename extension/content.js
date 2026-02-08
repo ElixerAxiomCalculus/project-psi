@@ -123,50 +123,50 @@ if (!state.listenerAttached) {
   state.listenerAttached = true;
 }
 
-// Create floating button on page
-function createFloatingButton() {
-  const buttonId = "psi-floating-button";
+// Create black floating trigger button with PSI symbol
+function createFloatingTrigger() {
+  const triggerId = "psi-floating-trigger";
   
   // Don't create if already exists
-  if (document.getElementById(buttonId)) return;
+  if (document.getElementById(triggerId)) return;
 
   const button = document.createElement("button");
-  button.id = buttonId;
-  button.innerHTML = "P.Psi";
-  button.title = "Click to open Project Psi";
+  button.id = triggerId;
+  button.innerHTML = "Ψ";
+  button.title = "Open Project Psi";
   
   button.style.cssText = `
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
-    background-color: #6366f1;
+    background-color: #1f2937;
     color: white;
     border: none;
-    font-size: 12px;
-    font-weight: bold;
+    font-size: 24px;
     cursor: pointer;
     z-index: 999999;
-    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
     font-family: system-ui, -apple-system, sans-serif;
     padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    line-height: 1;
   `;
 
   button.addEventListener("mouseenter", () => {
-    button.style.backgroundColor = "#4f46e5";
-    button.style.boxShadow = "0 6px 16px rgba(99, 102, 241, 0.5)";
+    button.style.backgroundColor = "#111827";
+    button.style.boxShadow = "0 6px 16px rgba(0, 0, 0, 0.4)";
     button.style.transform = "scale(1.1)";
   });
 
   button.addEventListener("mouseleave", () => {
-    button.style.backgroundColor = "#6366f1";
-    button.style.boxShadow = "0 4px 12px rgba(99, 102, 241, 0.4)";
+    button.style.backgroundColor = "#1f2937";
+    button.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.3)";
     button.style.transform = "scale(1)";
   });
 
@@ -177,9 +177,9 @@ function createFloatingButton() {
   document.body.appendChild(button);
 }
 
-// Inject floating button when DOM is ready
+// Auto-inject floating trigger button on page load
 if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", createFloatingButton);
+  document.addEventListener("DOMContentLoaded", createFloatingTrigger);
 } else {
-  createFloatingButton();
+  createFloatingTrigger();
 }
