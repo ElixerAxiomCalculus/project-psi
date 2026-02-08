@@ -257,7 +257,9 @@ chrome.runtime.onMessage.addListener((req, sender, sendResponse) => {
 });
 
 // Extension icon click handler - user manually opens sidebar
-chrome.action.onClicked.addListener((tab) => {
-  if (!tab?.id) return;
-  injectSidebar(tab.id, tab.url);
-});
+if (chrome?.action?.onClicked) {
+  chrome.action.onClicked.addListener((tab) => {
+    if (!tab?.id) return;
+    injectSidebar(tab.id, tab.url);
+  });
+}
